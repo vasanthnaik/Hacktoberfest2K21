@@ -31,21 +31,10 @@ Output:
 1
 0
 */
+
+
 #include <iostream>
 using namespace std;
-
-int count(int n)
-{
-	int c=0;
-	while(n!=0)
-	{
-		int d=n%10;
-		if(d==4)
-			c++;
-		n/=10;
-	}
-	return c;
-}
 
 int main()
 {
@@ -55,6 +44,14 @@ int main()
 	{
 		int n;
 		cin>>n;
-		cout<<count(n)<<"\n";
+		int c=0;
+    	while(n!=0)
+	    {
+	    	int d=n%10;
+		    if(d==4)
+	   	    	c++;
+	    	n=n/10;
+	    }
+		cout<<c<<endl;
 	}
 }
